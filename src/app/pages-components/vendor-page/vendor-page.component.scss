@@ -1,0 +1,61 @@
+.section__vendor-page {
+  padding: 60px 0;
+}
+
+.about-vendor__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  text-align: center;
+  width: 50%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(70, 70, 70, 0.2);
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.vendor__logo {
+  margin-right: 40px;
+}
+
+// .section__vendor-page {
+//   margin: 3rem 0 3rem 0;
+// }
+
+// .vendor-page__content {
+//   display: flex;
+// }
+
+// .vendor-page__main-information {
+//   width: 40%;
+
+//   .vendor-page__description {
+//     margin-top: 2rem;
+//   }
+// }
+
+// .vendor-page__about-vendor {
+//   display: flex;
+// }
+
+// .about-vendor__contacts {
+//   margin: 1.5rem 0 0 1.5rem;
+
+//   .about-vendor__phone-number {
+//     margin: 0.5rem 0 0.5rem 0;
+//   }
+// }
+
+// .vendor-page__proposition {
+//   width: 60%;
+//   margin-left: 3rem;
+// }
+
+// .vendor-page__category {
+//   margin: 3.5rem 0 0 0;
+
+//   .p-button-outlined:first-child {
+//     margin-right: 2.5rem;
+//   }
+// }

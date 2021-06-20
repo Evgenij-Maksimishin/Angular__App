@@ -1,0 +1,95 @@
+.deal-card {
+  display: block;
+  width: 280px;
+  height: 280px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  font-size: 0.875rem;
+  box-sizing: border-box;
+  border-radius: 3px 3px 3px 3px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.top {
+  background: linear-gradient(to right, #00f260, #0575e6);
+  background-size: cover;
+  height: 50%;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  height: 50%;
+}
+
+.deal-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-left {
+  font-size: 1.125rem;
+}
+
+.tag {
+  display: inline-block;
+  width: auto;
+  height: 32px;
+  background-color: #979797;
+  -webkit-border-radius: 3px 4px 4px 3px;
+  -moz-border-radius: 3px 4px 4px 3px;
+  border-radius: 3px 4px 4px 3px;
+  border-left: 1px solid #979797;
+
+  /* This makes room for the triangle */
+  margin-left: 16px;
+  position: relative;
+  color: white;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 32px;
+
+  padding: 0 10px 0 10px;
+}
+
+/* Makes the triangle */
+.tag:before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: -16px;
+  width: 0;
+  height: 0;
+  border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-right: 16px solid #979797;
+}
+
+/* Makes the circle */
+.tag:after {
+  content: '';
+  background-color: white;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: 13px;
+}

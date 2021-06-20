@@ -1,0 +1,81 @@
+@import '..//..//..//scss/vars';
+
+footer {
+  background-color: #f9f9f9;
+}
+
+.bd-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.813rem;
+  padding: 30px 0;
+}
+
+.logo__img {
+  height: 60px;
+}
+
+.address__item {
+  display: block;
+  font-style: normal;
+
+  &:not(:last-child) {
+    margin-bottom: 2px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $secondary__text-color;
+    transform: scale(1.08);
+  }
+}
+
+address {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.join-us {
+  display: block;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .footer & {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $secondary__text-color;
+  }
+}
+
+.social-list__svg {
+  width: 20px;
+  height: 20px;
+  fill: $accent__color;
+  transition: fill 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .social-list__link:hover &,
+  .social-list__link:focus & {
+    fill: white;
+  }
+}

@@ -1,0 +1,44 @@
+<app-header></app-header>
+<p-table
+  [columns]="cols"
+  [value]="deals"
+  styleClass="p-datatable-responsive-demo"
+  [paginator]="true"
+  [rows]="10"
+  [showCurrentPageReport]="true"
+>
+  <ng-template *ngIf="noMobile" pTemplate="colgroup" class="callgroup">
+    <colgroup>
+      <col style="width: 15%" />
+      <col style="width: 10%" />
+      <col style="width: 10%" />
+      <col style="width: 10%" />
+      <col style="width: 10%" />
+      <col style="width: 30%" />
+      <col style="width: 10%" />
+    </colgroup>
+  </ng-template>
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{ col.header }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td *ngFor="let col of columns" class="table_item_{{ col.field }} ">
+        <p-accordion *ngIf="col.field === 'description'; else other_content">
+          <p-accordionTab>
+            <ng-template pTemplate="header">Description</ng-template>
+            <ng-template pTemplate="content">{{ rowData[col.field].substr(0.3) }}... </ng-template>
+          </p-accordionTab>
+        </p-accordion>
+        <ng-template #other_content>
+          {{ rowData[col.field] }}
+        </ng-template>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+<app-footer></app-footer>

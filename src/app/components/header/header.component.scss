@@ -1,0 +1,31 @@
+@import '../../../scss/vars';
+
+header {
+  box-shadow: 0 9px 18px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.header-line {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 15px;
+  align-items: center;
+}
+
+input {
+  height: 3rem;
+  width: 100%;
+}
+
+.logo {
+  height: 3rem;
+
+  img {
+    height: 3rem;
+  }
+}
+
+.user-picture {
+  margin: auto 0 auto auto;
+  cursor: pointer;
+  height: 3rem;
+}

@@ -1,0 +1,109 @@
+@import '../../../scss/vars';
+
+.bd-container {
+  padding: 60px 15px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  font-size: 0.875rem;
+}
+
+.left-wrapper {
+  width: 55%;
+  margin-right: 30px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+.right-wrapper {
+  width: 40%;
+  padding: 60px 30px;
+  text-align: center;
+  // height: 500px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(70, 70, 70, 0.2);
+  border-radius: 5px;
+}
+
+.deal-info {
+  margin-bottom: 30px;
+}
+
+.deal-info__block:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.active {
+  color: #32cd32;
+  font-weight: 700;
+}
+
+.inactive {
+  color: red;
+  font-weight: 700;
+}
+
+.vendor-name {
+  font-weight: 700;
+  font-size: 1.188rem;
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-size: 1.813rem;
+}
+
+.new-price {
+  font-size: 1.813rem;
+  font-weight: 700;
+}
+
+.timer {
+  margin-bottom: 50px;
+}
+
+.days {
+  font-size: 1.875rem;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin-right: 25px;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+}
+
+countdown {
+  font-size: 1.25rem;
+  color: red;
+}
+
+.panel-content {
+  padding: 25px 0;
+}
+
+.vendor {
+  color: $button__color;
+
+  &:hover,
+  &:focus {
+    color: $accent__color;
+  }
+}

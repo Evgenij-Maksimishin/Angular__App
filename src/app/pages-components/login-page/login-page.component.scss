@@ -1,0 +1,56 @@
+@import '../../../scss/vars';
+
+.login-container {
+  max-width: 750px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin: 0 auto;
+}
+
+.login-page__logo {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 240px;
+    height: 75px;
+    margin-top: 50px;
+  }
+}
+
+.login-page__log-in {
+  text-align: center;
+  margin-top: 75px;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+  color: $black__color;
+}
+
+.login-page__sign-in {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 24px;
+  line-height: 24px;
+  color: $black__color;
+}
+
+.login-page__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 65px;
+}
+
+.login-page__input input {
+  width: 20rem;
+}
+
+.login-page__input {
+  margin: 1rem auto;
+}
+
+.login-button {
+  width: 20rem;
+}

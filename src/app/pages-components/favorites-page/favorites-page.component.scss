@@ -1,0 +1,51 @@
+#main-container {
+  display: grid;
+  grid-template-areas:
+    'sidemenu divider infocard'
+    'sidemenu divider order'
+    'sidemenu divider gallery';
+  grid-template-rows: auto auto 1fr;
+  grid-template-columns: auto auto 1fr;
+  gap: 20px 10px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+p-card {
+  grid-area: infocard;
+
+  i {
+    font-size: 2rem;
+    color: gold;
+  }
+}
+
+app-sidemenu {
+  grid-area: sidemenu;
+}
+
+.sidemenu-section {
+  margin-bottom: 10px;
+}
+
+p-divider {
+  grid-area: divider;
+}
+
+app-search-content {
+  grid-area: search;
+}
+
+app-categories-sidebar {
+  grid-area: categories;
+}
+
+app-sorting-dropdown {
+  grid-area: order;
+}
+
+app-deal-gallery {
+  grid-area: gallery;
+}

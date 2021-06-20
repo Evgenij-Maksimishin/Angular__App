@@ -1,0 +1,90 @@
+:host ::ng-deep {
+  .p-datatable-responsive-demo {
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 1280px;
+    display: grid;
+  }
+
+  .p-datatable-thead > tr > th {
+    text-align: center !important;
+  }
+
+  .p-datatable-tbody > tr {
+    border-top: 2px #000 solid;
+  }
+
+  .p-datatable-tbody > tr:first-child {
+    border-top: none;
+  }
+
+  > td {
+    text-align: center;
+  }
+
+  .table_item_title {
+    text-align: center !important;
+  }
+
+  .table_item_country {
+    text-align: center !important;
+  }
+
+  .table_item_city {
+    text-align: center !important;
+  }
+
+  .table_item_startDate {
+    text-align: center !important;
+  }
+
+  .table_item_expiryDate {
+    text-align: center !important;
+  }
+
+  .table_item_description {
+    text-align: center !important;
+  }
+
+  .table_item_vendor {
+    text-align: center !important;
+  }
+
+  .p-column-title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  :host ::ng-deep {
+    .p-datatable {
+      &.p-datatable-responsive-demo {
+        .p-datatable-thead > tr > th,
+        .p-datatable-tfoot > tr > td {
+          display: none !important;
+        }
+
+        .p-datatable-tbody > tr > td {
+          text-align: center;
+          display: block;
+          width: 100%;
+          float: left;
+          clear: left;
+          border: 0 none;
+
+          .p-column-title {
+            padding: 0.4rem;
+            min-width: 30%;
+            display: inline-block;
+            margin: -0.4em 1em -0.4em -0.4rem;
+            font-weight: bold;
+          }
+
+          &:last-child {
+            border-bottom: 1px solid #000;
+          }
+        }
+      }
+    }
+  }
+}

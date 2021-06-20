@@ -1,0 +1,115 @@
+<app-header></app-header>
+
+<div class="bd-container">
+  <button
+    pButton
+    type="button"
+    label="Go back"
+    icon="pi pi-arrow-circle-left"
+    iconPos="left"
+    (click)="goBackHandler()"
+  ></button>
+  <div class="content-wrapper">
+    <div class="left-wrapper">
+      <p-galleria [value]="images" [numVisible]="4">
+        <ng-template pTemplate="item" let-item>
+          <img [src]="item.previewImageSrc" [alt]="item.alt" />
+        </ng-template>
+        <ng-template pTemplate="thumbnail" let-item>
+          <div class="p-grid p-nogutter p-justify-center">
+            <img [src]="item.thumbnailImageSrc" />
+          </div>
+        </ng-template>
+      </p-galleria>
+    </div>
+    <div class="right-wrapper">
+      <div class="deal-info">
+        <div class="deal-info__block">
+          <h2 class="animate__animated animate__pulse">{{ deals[0].title }}</h2>
+          <p
+            [ngClass]="{
+              active: deals[0].status === 'Active',
+              inactive: deals[0].status !== 'Active'
+            }"
+          >
+            {{ deals[0].status }}
+          </p>
+        </div>
+        <div class="deal-info__block">
+          <a class="vendor" [routerLink]="['../vendor', 1]">
+            <p class="vendor-name">
+              <i class="pi pi-angle-right"></i> {{ deals[0].vendor }}
+              <i class="pi pi-angle-left"></i>
+            </p>
+          </a>
+          <p><i class="pi pi-map-marker"></i> {{ deals[0].country }}, {{ deals[0].city }}</p>
+        </div>
+        <div class="deal-info__block">
+          <span class="old-price">{{ deals[0].oldPrice }}$</span> -
+          <span class="new-price">{{ deals[0].newPrice }}$</span>
+        </div>
+      </div>
+      <div class="timer" id="timer-1">
+        <div class="field">
+          <span *ngIf="!noMoreDaysLeft" class="days">{{ days }} days</span>
+          <countdown
+            class="animate__animated animate__flash"
+            *ngIf="noMoreDaysLeft"
+            [config]="{leftTime: date / 1000}"
+          ></countdown>
+          <p class="label">left till the end of the promotion</p>
+        </div>
+      </div>
+      <div class="buttons-wrapper">
+        <button
+          pButton
+          type="button"
+          label="ADD TO FAVORITES"
+          icon="pi pi-heart"
+          iconPos="left"
+        ></button>
+        <button pButton type="button" label="GET COUPON" icon="pi pi-send" iconPos="left"></button>
+      </div>
+    </div>
+  </div>
+  <p-tabView>
+    <p-tabPanel leftIcon="pi pi-info-circle" header="Deal details">
+      <div class="panel-content">{{ deals[0].description }}</div>
+    </p-tabPanel>
+    <p-tabPanel leftIcon="pi pi-calendar" header="Deal dates">
+      <div class="panel-content">
+        <p>Start date: {{ deals[0].startDate }}</p>
+        <p>End date: {{ deals[0].expiryDate }}</p>
+      </div>
+    </p-tabPanel>
+    <p-tabPanel leftIcon="pi pi-question-circle" header="How to use a coupon">
+      <div class="panel-content">
+        <p>
+          You can use the certificate from 04/28/2021 to 08/31/2021 The price includes payment for
+          information services provided by Purchase on the basis of the Public Offer.
+        </p>
+        <p>
+          IMPORTANT CONDITIONS Services are provided as usual. The promotion is valid any day of the
+          week. Before purchasing a certificate, be sure to check the availability of seats for the
+          desired date and time. For rental, you must have an identity document. Persons in a state
+          of alcoholic or drug intoxication are not allowed to race. The certificate can be
+          exchanged for a gift certificate. To do this, you need to contact the company by phone and
+          name the unique certificate code, after which the gift certificate will be sent in a way
+          convenient for you (at the meeting or by courier at the expense of the recipient).
+        </p>
+        <p>
+          ADDITIONAL CONDITIONS One client can use an unlimited number of certificates. The discount
+          on certificates is not cumulative with other promotional offers of the company. To receive
+          a discount, you must submit a certificate in electronic form. Give the last digit of the
+          certificate (activation code) only when you receive the service. After activation, the
+          service is considered to be provided, and the certificate is non-refundable. If you signed
+          up for skiing, but did not come at the specified time and did not warn you about changing
+          your plans 12 hours in advance, the rental administration reserves the right to refuse to
+          provide services at a discount.
+        </p>
+      </div>
+    </p-tabPanel>
+  </p-tabView>
+</div>
+
+<app-footer></app-footer>

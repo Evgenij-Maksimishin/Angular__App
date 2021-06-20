@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<div class="bd-container">
+  <h3>My profile</h3>
+  <div class="picture-container">
+    <img [src]="url" alt="" class="user-picture" />
+    <label pButton class="p-button-raised">
+      <input type="file" accept="image/*" (change)="selectFile($event)" />
+      Change picture
+    </label>
+  </div>
+  <div class="user-info-container">
+    <ul class="user-info">
+      <li class="item">
+        First Name <span class="first-name">{{ user.firstName }}</span>
+      </li>
+      <li class="item">
+        Last Name <span class="last-name">{{ user.lastName }}</span>
+      </li>
+      <li class="item">
+        Email <span class="email">{{ user.email }}</span>
+      </li>
+      <li class="item">
+        Current Location
+        <span class="location">{{ user.location.city }}, {{ user.location.country }}</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<app-footer></app-footer>

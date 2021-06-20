@@ -1,0 +1,30 @@
+<header>
+  <div class="bd-container header-line">
+    <a class="logo" routerLink="">
+      <img src="/assets/images/logo-transparent.png" alt="logo" />
+    </a>
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input class="p-inputtext-lg" type="text" pInputText placeholder="Search" />
+    </span>
+    <!-- <img src="{{user.profilePicture}}" alt="" class="user-picture" (click)="menu.toggle($event)"> -->
+    <!-- <button class="user-profile-menu-button" type="button" pButton icon="pi pi-user" (click)="menu.toggle($event)"></button> -->
+    <p-avatar
+      image="{{ user.profilePicture }}"
+      styleClass="p-mr-2"
+      size="large"
+      shape="circle"
+      class="user-picture"
+      (click)="menu.toggle($event)"
+    >
+    </p-avatar>
+    <p-menu
+      [showTransitionOptions]="'.12s cubic-bezier(0, 0, 0.2, 1)'"
+      [hideTransitionOptions]="'.12s cubic-bezier(0, 0, 0.2, 1)'"
+      #menu
+      [popup]="true"
+      [model]="items"
+    >
+    </p-menu>
+  </div>
+</header>
